@@ -167,9 +167,9 @@ def show_all_users(message):
                         except Exception as e:
                             response += f"- 𝗬𝗼𝘂𝗿 𝗜𝗗: {user_id}\n"
                 else:
-                    response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌7"
+                    response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 🤡"
         except FileNotFoundError:
-            response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌️"
+            response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌"
     else:
         response = "𝗢𝗻𝗹𝘆 𝗗𝗮𝗱 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗼𝘁 𝘀𝗼𝗻 😂."
     bot.reply_to(message, response)
@@ -184,12 +184,10 @@ def show_recent_logs(message):
                 with open(LOG_FILE, "rb") as file:
                     bot.send_document(message.chat.id, file)
             except FileNotFoundError:
-                response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌
-."
+                response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌."
                 bot.reply_to(message, response)
         else:
-            response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌
-"
+            response = "𝗡𝗼 𝗱𝗮𝘁𝗮 𝗳𝗼𝘂𝗻𝗱 ❌"
             bot.reply_to(message, response)
     else:
         response = "𝗢𝗻𝗹𝘆 𝗗𝗮𝗱 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗼𝘁 𝘀𝗼𝗻 😂."
@@ -245,7 +243,8 @@ def handle_bgmi(message):
                 subprocess.run(full_command, shell=True)
                 response = f"𝗕𝗚𝗠𝗜 𝗔𝘁𝘁𝗮𝗰𝗸 𝗙𝗶𝗻𝗶𝘀𝗵𝗲𝗱. 𝗧𝗮𝗿𝗴𝗲𝘁 : {target} 𝗣𝗼𝗿𝘁: {port} 𝘁𝗶𝗺𝗲: {time}"
         else:
-            response = "✅ 𝗨𝘀𝗮𝗴𝗲 :- /bgmi <𝘁𝗮𝗿𝗴𝗲𝘁> <𝗽𝗼𝗿𝘁> <𝘁𝗶𝗺𝗲>"  # Updated command syntax
+            response = "✅ 𝗨𝘀𝗮𝗴𝗲 :- /bgmi <𝘁𝗮𝗿𝗴𝗲𝘁> <𝗽𝗼𝗿𝘁> <𝘁𝗶𝗺𝗲>
+"  # Updated command syntax
     else:
         response = "❌ 𝗬𝗼𝘂 𝗔𝗿𝗲 𝗡𝗼𝘁 𝗔𝘂𝘁𝗵𝗼𝗿𝗶𝘇𝗲𝗱 𝗧𝗼 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 😡."
 
